@@ -1,4 +1,3 @@
-from dataclasses import dataclass
 from person_exceptions import PersonException
 from app import app, db
 from models import Person

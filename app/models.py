@@ -8,7 +8,7 @@ class Person(db.Model):
     address = db.relationship('Address', backref='occupant', uselist=False)
 
     def __repr__(self):
-        return f'Person id: {self.id} Person named {self.name}, age {self.age}'
+        return f'Person id: {self.id}, named {self.name}, age {self.age}'
 
 
 class Address(db.Model):

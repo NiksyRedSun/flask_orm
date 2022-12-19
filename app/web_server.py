@@ -36,7 +36,7 @@ def delete_user_profile(id):
     if __person_repository.delete(Person(id=id)):
         return json.dumps({'success': True}), 200
     else:
-        raise PersonException('500')
+        raise PersonException('Не удалось выполнить запрос')
 
 
 @app.route('/user', methods=['POST'])
@@ -62,7 +62,7 @@ def put_user_profile(id):
     if __person_repository.update(Person(id, name, age)):
         return json.dumps({'success': True}), 200
     else:
-        raise PersonException('500')
+        raise PersonException('Не удалось выполнить запрос')
 
 
 if __name__ == '__main__':
